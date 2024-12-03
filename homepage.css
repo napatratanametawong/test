@@ -909,6 +909,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         top: 19%;
     }
 
+    .card-item .name{
+        font-size: 24px;
+    }
+
     .title-guest {
         font-size: 30px;
         padding-top: 40px;
