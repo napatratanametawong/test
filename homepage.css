@@ -894,6 +894,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         text-align: center;
     }
 
+    header.scrolled {
+        background: rgba(112, 111, 111, 0.116);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
     #check:checked~nav {
         height: 12.0rem;
     
