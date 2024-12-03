@@ -27,13 +27,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Homepage
 const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+
+if (header) {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (!entry.isIntersecting) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        },
+        { threshold: 0.1 }
+    );
+
+    observer.observe(document.body); // สังเกตทั้งหน้าหรือเฉพาะ section
+}
+
 //slider member
 let items = document.querySelectorAll('.card-slider .card-item');
 let next = document.getElementById('right');
